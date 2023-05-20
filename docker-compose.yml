@@ -1,0 +1,36 @@
+version: "3.8"
+services:
+  mysql:
+    image: mysql:5.7.22
+    container_name: mysql_hdfs_part_1
+    environment:
+      MYSQL_ROOT_PASSWORD: hdfs_part_1
+      MYSQL_DATABASE: sakila
+      MYSQL_USER: hdfs_part_1
+      MYSQL_PASSWORD: hdfs_part_1
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - mysql-network
+
+  sqoop_server:
+    build: ./sqoop_server_hdfs
+    container_name: sqoop_server_hdfs_part_1
+    ports:
+      - "12000:12000"
+      - "50070:50070"
+      - "8088:8088"
+      - "8042:8042"
+      - "9000:9000"
+      - "10000:10000"
+      - "9870:9870"
+      - "9083:9083"
+    networks:
+      - mysql-network
+    links:
+      - mysql
+    tty: true
+networks:
+  mysql-network:
