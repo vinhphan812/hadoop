@@ -29,6 +29,7 @@ RUN ls /tmp/packages
 RUN tar -xzf /tmp/packages/sqoop-1.4.7.bin__hadoop-2.6.0.tar.gz -C /tmp/packages \
      && mv /tmp/packages/sqoop-1.4.7.bin__hadoop-2.6.0 $SQOOP_HOME
 
+RUN cp /tmp/packages/java-json.jar.zip $SQOOP_HOME/lib && unzip $SQOOP_HOME/lib/java-json.jar.zip
 
 # install JDBC MySQL
 RUN tar -xvf /tmp/packages/mysql-connector-java-$MYSQL_JAR_VERSION.tar.gz -C /tmp/packages \

@@ -13,3 +13,6 @@ curl -Lo ./packages/apache-hive-3.1.2-bin.tar.gz https://archive.apache.org/dist
 # SPARK
 echo Download Spark
 curl -Lo ./packages/spark-3.3.0-bin-hadoop3.tgz https://archive.apache.org/dist/spark/spark-3.3.0/spark-3.3.0-bin-hadoop3.tgz
+
+# JAVA JSON FOR SQOOP
+curl -Lo ./packages/java-json.jar.zip http://www.java2s.com/Code/JarDownload/java-json/java-json.jar.zip
