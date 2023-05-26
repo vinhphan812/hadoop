@@ -20,7 +20,7 @@ ENV YARN_NODEMANAGER_USER root
 # install zip & unzip
 RUN yum install zip unzip -y
 
-RUN yum install cronie
+RUN yum install cronie -y
 
 
 # install sqoop for Hadoop
