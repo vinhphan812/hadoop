@@ -20,6 +20,9 @@ ENV YARN_NODEMANAGER_USER root
 # install zip & unzip
 RUN yum install zip unzip -y
 
+RUN yum install cronie
+
+
 # install sqoop for Hadoop
 # RUN curl -s https://archive.apache.org/dist/sqoop/1.4.7/sqoop-1.4.7.bin__hadoop-2.6.0.tar.gz | tar -xz -C /usr/local
 # RUN ln -s /usr/local/sqoop-1.4.7.bin__hadoop-2.6.0 $SQOOP_HOME
