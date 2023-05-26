@@ -20,6 +20,8 @@ ENV YARN_NODEMANAGER_USER root
 # install zip & unzip
 RUN yum install zip unzip -y
 
+
+# install crontab
 RUN yum install cronie -y
 
 

@@ -6,6 +6,11 @@ $HADOOP_HOME/etc/hadoop/hadoop-env.sh
 
 rm /tmp/*.pid
 
+sudo rm -r /app/hadoop/tmp
+sudo mkdir -p /app/hadoop/tmp
+sudo chown root:root /app/hadoop/tmp
+sudo chmod 750 /app/hadoop/tmp
+
 # installing libraries if any - (resource urls added comma separated to the ACP system variable)
 cd $HADOOP_HOME/share/hadoop/common ; for cp in ${ACP//,/ }; do  echo == $cp; curl -LO $cp ; done; cd -
 
