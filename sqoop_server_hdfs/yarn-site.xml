@@ -3,15 +3,15 @@
     <name>yarn.nodemanager.aux-services</name>
     <value>mapreduce_shuffle</value>
   </property>
-  
+
   <property>
     <name>yarn.scheduler.maximum-allocation-mb</name>
-    <value>32768</value>
+    <value>24576</value>
   </property>
 
   <property>
     <name>yarn.scheduler.maximum-allocation-vcores</name>
-    <value>18</value>
+    <value>10</value>
   </property>
 
   <property>
