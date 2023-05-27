@@ -20,6 +20,12 @@
   </property>
 
   <property>
+    <name>yarn.scheduler.minimum-allocation-vcores</name>
+    <value>2</value>
+  </property>
+
+  
+  <property>
     <name>yarn.scheduler.maximum-allocation-vcores</name>
     <value>12</value>
   </property>
