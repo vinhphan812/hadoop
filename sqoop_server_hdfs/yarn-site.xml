@@ -21,7 +21,7 @@
 
   <property>
     <name>yarn.scheduler.maximum-allocation-vcores</name>
-    <value>10</value>
+    <value>12</value>
   </property>
 
   <property>
