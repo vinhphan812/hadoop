@@ -6,6 +6,7 @@ USER root
 ENV SQOOP_HOME /usr/local/sqoop
 ENV SPARK_HOME /usr/local/spark
 ENV HIVE_HOME /hive
+ENV HIVE_CONF_DIR $HIVE_HOME/conf
 ENV MYSQL_JAR_VERSION 5.1.46
 ENV SPARK_VERSION 3.3.0
 ENV HIVE_VERSION 3.1.2
@@ -69,6 +70,7 @@ RUN tar -xzf /tmp/packages/spark-3.3.0-bin-hadoop3.tgz -C /tmp/packages/ && \
 
 # Export Hadoop, HIVE, SPARK, SQOOP
 ENV PATH $PATH:$HIVE_HOME/bin:$SPARK_HOME/bin:$SPARK_HOME/sbin:$HADOOP_HOME/bin:$SQOOP_HOME/bin
+ENV HADOOP_CLASSPATH $HADOOP_CLASSPATH:$HIVE_HOME/lib/*
 
 # Export JDBC MySQL
 ENV CLASSPATH $CLASSPATH:$SQOOP_HOME/lib/mysql-connector-java-$MYSQL_JAR_VERSION-bin.jar:$HIVE_HOME/lib/mysql-connector-java-$MYSQL_JAR_VERSION-bin.jar
