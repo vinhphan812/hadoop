@@ -21,7 +21,7 @@
 
   <property>
     <name>yarn.scheduler.minimum-allocation-vcores</name>
-    <value>2</value>
+    <value>4</value>
   </property>
 
   
