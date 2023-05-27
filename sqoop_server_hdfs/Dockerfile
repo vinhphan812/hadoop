@@ -81,6 +81,8 @@ RUN rm -rf $HADOOP_HOME/etc/hadoop/hdfs-site.xml
 COPY hdfs-site.xml $HADOOP_HOME/etc/hadoop/hdfs-site.xml
 RUN rm -rf $HADOOP_HOME/etc/hadoop/yarn-site.xml
 COPY yarn-site.xml $HADOOP_HOME/etc/hadoop/yarn-site.xml
+RUN rm -rf $HADOOP_HOME/etc/hadoop/mapred-site.xml
+COPY mapred-site.xml $HADOOP_HOME/etc/hadoop/mapred-site.xml
 
 # Copy start
 COPY bootstrap.sh /etc/bootstrap.sh
