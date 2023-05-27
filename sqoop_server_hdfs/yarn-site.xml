@@ -3,25 +3,25 @@
     <name>yarn.nodemanager.aux-services</name>
     <value>mapreduce_shuffle</value>
   </property>
-
-  <property>
-    <name>yarn.scheduler.minimum-allocation-mb</name>
-    <value>32768</value>
-  </property>
-
+  
   <property>
     <name>yarn.scheduler.maximum-allocation-mb</name>
-    <value>65536</value>
-  </property>
-
-  <property>
-    <name>yarn.scheduler.minimum-allocation-vcores</name>
-    <value>10</value>
+    <value>32768</value>
   </property>
 
   <property>
     <name>yarn.scheduler.maximum-allocation-vcores</name>
     <value>18</value>
+  </property>
+
+  <property>
+    <name>yarn.nodemanager.pmem-check-enabled</name>
+    <value>false</value>
+  </property>
+
+  <property>
+    <name>yarn.nodemanager.vmem-check-enabled</name>
+    <value>false</value>
   </property>
 
     <property>
